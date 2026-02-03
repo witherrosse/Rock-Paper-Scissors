@@ -17,7 +17,7 @@ def get_user_choice():
     """Prompt user for a valid choice."""
     choice = input("Choose rock, paper, or scissors: ").strip().lower()
     if choice not in CHOICES:
-        print("❌ Invalid choice.")
+        print(" Invalid choice.")
         return None
     return choice
 
@@ -45,11 +45,11 @@ def print_result(user, computer, result):
     print(f"Computer chose: {computer}")
 
     if result == "win":
-        print("🏆 You win!")
+        print(" You win!")
     elif result == "lose":
-        print("💀 You lose!")
+        print(" You lose!")
     else:
-        print("🤝 It's a draw!")
+        print(" It's a draw!")
 
 
 def start_game():
