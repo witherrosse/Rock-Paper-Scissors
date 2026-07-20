@@ -7,14 +7,16 @@ SCISSORS = "scissors"
 CHOICES = [ROCK, PAPER, SCISSORS]
 
 WINNING_CASES = {
-    ROCK: SCISSORS,     # Rock beats Scissors
-    SCISSORS: PAPER,    # Scissors beats Paper
-    PAPER: ROCK         # Paper beats Rock
+    ROCK: SCISSORS,     
+    SCISSORS: PAPER,    
+    PAPER: ROCK         
 }
 
 
 def get_user_choice():
-    """Prompt user for a valid choice."""
+    
+    """ Prompt user for a valid choice """
+    
     choice = input("Choose rock, paper, or scissors: ").strip().lower()
     if choice not in CHOICES:
         print(" Invalid choice.")
@@ -23,7 +25,9 @@ def get_user_choice():
 
 
 def get_computer_choice():
-    """Randomly select computer choice."""
+    
+    """ Randomly select computer choice """
+    
     return random.choice(CHOICES)
 
 
@@ -40,7 +44,8 @@ def determine_winner(user, computer):
 
 
 def print_result(user, computer, result):
-    """Display game result."""
+    
+    """ Display game result """
     print(f"\nYou chose: {user}")
     print(f"Computer chose: {computer}")
 
@@ -53,7 +58,7 @@ def print_result(user, computer, result):
 
 
 def start_game():
-    """Main game controller."""
+    """ Main game controller """
     user_choice = get_user_choice()
     if not user_choice:
         return
